@@ -13,11 +13,11 @@
 <style>
 body { 
     font-family: 'Segoe UI', Arial, sans-serif; 
-    max-width: 1800px; /* INCREASED from 1400px for larger default size */
+    max-width: 1229px; /* INCREASED by 15% from 1069px */
     margin: 20px auto; 
     padding: 15px; 
     color: #E8E0D5; /* Mist/Bone */
-    font-size: 18px; /* ADDED: Increased base font size for better readability */
+    font-size: 12.3px; /* INCREASED by 15% from 10.7px */
     
     /* BACKGROUND SETUP */
     background-color: #25201D; /* Deep Loam Fallback */
@@ -81,6 +81,17 @@ h1 {
     border: 1px solid rgba(255,255,255,0.05);
     box-shadow: 0 4px 6px rgba(0,0,0,0.3);
     margin-bottom: 15px; /* REDUCED from 25px */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    position: relative; /* Needed for z-index to work */
+}
+
+/* UPDATED: Hover effect now enlarges the box by 40% */
+.section:hover {
+    background-color: rgba(66, 56, 49, 0.98); /* Brighter background on hover */
+    transform: scale(1.40); /* Enlarge by 40% on hover */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    z-index: 10; /* Ensures it's on top of other content */
 }
 
 /* Remove bottom margin from the last section in a column */
@@ -225,6 +236,8 @@ const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
 
 // Set the background image of the page
 document.body.style.backgroundImage = `url('${randomBg}')`;
+
+
 </script>
 
 </body>
