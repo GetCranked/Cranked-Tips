@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cranked: Tips & Tricks</title>
+
+<!-- ADDED: Import Montserrat font from Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body { 
+    font-family: 'Segoe UI', Arial, sans-serif; 
+    max-width: 1400px; 
+    margin: 20px auto; /* REDUCED from 40px */
+    padding: 15px; /* REDUCED from 20px */
+    color: #E8E0D5; /* Mist/Bone */
+    
+    /* BACKGROUND SETUP */
+    background-color: #25201D; /* Deep Loam Fallback */
+    background-image: url('CrankedtipsBG.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Add semi-transparent overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(37, 32, 29, 0.85); /* Darkens the background */
+    z-index: -1;
+}
+
+/* UPDATED: Applied Montserrat font to main title and reduced padding */
+h1 { 
+    font-family: 'Montserrat', sans-serif;
+    color: #FFB347; /* Sunset Gold */
+    border-bottom: 2px solid #E66741; /* Burnt Sienna */
+    padding-bottom: 5px; /* REDUCED from 10px */
+    margin-bottom: 15px; /* REDUCED from default */
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.proviso { 
+    background: rgba(230, 103, 65, 0.15); /* Low opacity Burnt Sienna */
+    padding: 10px; /* REDUCED from 15px */
+    border-left: 4px solid #E66741; 
+    margin-bottom: 20px; /* REDUCED from 30px */
+}
+
+/* UPDATED: Reduced grid gap for tighter spacing */
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Defines 3 columns */
+    gap: 15px; /* REDUCED from 25px */
+    align-items: start; 
+}
+
+/* The philosophy section spans all 3 columns */
+.section.philosophy {
+    grid-column: 1 / -1;
+}
+
+.section { 
+    background: rgba(51, 43, 38, 0.95); /* Shadowed Earth with transparency */
+    padding: 10px; /* REDUCED from 15px */
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    margin-bottom: 15px; /* REDUCED from 25px */
+}
+
+/* Remove bottom margin from the last section in a column */
+.column > .section:last-child {
+    margin-bottom: 0;
+}
+
+/* UPDATED: Applied Montserrat font and adjusted size/spacing */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em; /* REDUCED slightly from 1.2em */
+    margin-top: 0;
+    margin-bottom: 10px; /* ADDED to control space under header */
+}
+
+table { width: 100%; border-collapse: collapse; }
+th { padding: 8px 10px; /* REDUCED vertical padding from 10px */ text-align: left; color: #1a1a1a; }
+td { padding: 6px 10px; /* REDUCED vertical padding from 8px */ border-bottom: 1px solid rgba(255,255,255,0.1); }
+tr:hover { background: rgba(255,255,255,0.05); }
+
+/* Section-specific color shades */
+.philosophy h2 { color: #FFB347; }
+.philosophy th { background: #FFB347; }
+.philosophy .category { font-weight: bold; color: #FFB347; }
+
+.jumping h2 { color: #E66741; }
+.jumping th { background: #E66741; }
+
+.landing h2 { color: #C49A6C; } /* Muted Ochre */
+.landing th { background: #C49A6C; color: #1a1a1a; }
+
+.berms h2 { color: #ff9966; }
+.berms th { background: #ff9966; }
+
+.tricks h2 { color: #E6C88A; } /* Softer Gold */
+.tricks th { background: #E6C88A; color: #1a1a1a; }
+
+.controls h2 { color: #B58A6A; } /* Warm Light Brown */
+.controls th { background: #B58A6A; color: #1a1a1a; }
+</style>
+</head>
+<body>
+<h1>CRANKED: TIPS & TRICKS</h1>
+
+<div class="proviso">
+<strong>Note:</strong> Not all of these are confirmed mechanics—some could be subtle or even placebo effects. Test everything yourself and adapt to what works for you. This guide incorporates community feedback; techniques may vary by player and situation.
+</div>
+
+<!-- CORRECTED: Using explicit columns for manual placement -->
+<div class="main-grid">
+
+<div class="section philosophy">
+<h2>CORE PHILOSOPHY</h2>
+<table>
+<tr><th>Principle</th><th>Why</th></tr>
+<tr><td class="category">Fluidity</td><td>This game rewards fluidity on the trails, maintaining speed and flow is key. Avoid abrupt changes of direction, or excessive steering on straight sections of trail.</td></tr>
+<tr><td class="category">Airtime = Momentum Conservation</td><td>Jibbing off small terrain features helps avoid losing speed to trail bumps. Jumping over a section of trail is generally faster than riding over it.</td></tr>
+<tr><td class="category">Flat > Float</td><td>Horizontal airtime preserves speed; too much vertical arc diminishes speed gains</td></tr>
+</table>
+</div>
+
+<!-- Start of the three columns below the header -->
+<div class="column">
+    <div class="section jumping">
+    <h2>JUMPING</h2>
+    <table>
+    <tr><th>Tip</th><th>Effect</th></tr>
+    <tr><td>Timing for Distance: Hop early, before the lip</td><td>"Sucks up" the jump, creating more forward movement and distance with flatter arc</td></tr>
+    <tr><td>Timing for Airtime: Hop late, at the lip</td><td>Maximizes vertical height and hang time for trick opportunities</td></tr>
+    <tr><td>Leaning forward slightly (LS forward) while hitting jump</td><td>Helps carry speed and avoid excessive vertical airtime</td></tr>
+    <tr><td>Slightly leaning forward once you are in the air</td><td>Seems to help with speed and jump distance a bit</td></tr>
+    <tr><td>Pre-hop <em>before entering the jump</em></td><td>Squashes rollers, prevents airtime, carries speed</td></tr>
+    <tr><td>RS from neutral/center → fully up</td><td>"Half" bunnyhop (softer alternative to a full hop)</td></tr>
+    <tr><td>LS down while initially jumping</td><td>May boost jump height/distance (unconfirmed—test yourself)</td></tr>
+    </table>
+    </div>
+</div>
+
+<div class="column">
+    <div class="section tricks">
+    <h2>TRICKS</h2>
+    <table>
+    <tr><th>Input</th><th>Result</th></tr>
+    <tr><td>LS forward + hold RS down</td><td>Front flip</td></tr>
+    <tr><td>LS back + hold RS down</td><td>Backflip</td></tr>
+    <tr><td>LS left/right</td><td>Spins (360°, 540°, etc.)</td></tr>
+    <tr><td>LS + RS in air</td><td>Whips (hard to explain, just gotta practice this one)</td></tr>
+    <tr><td>Hold RS up during rotations</td><td>Keeps bike flat and enables faster spins</td></tr>
+    </table>
+    </div>
+    <div class="section landing">
+    <h2>LANDING</h2>
+    <table>
+    <tr><th>Tip</th><th>Effect</th></tr>
+    <tr><td>Land with both wheels together, or front slightly sooner</td><td>Seems to help with speed a bit</td></tr>
+    <tr><td>Crouching/pulling RS down while landing</td><td>Can cause bails, hard landings and speed penalty</td></tr>
+    </table>
+    </div>
+</div>
+
+<div class="column">
+    <div class="section berms">
+    <h2>BERMS</h2>
+    <table>
+    <tr><th>Tip</th><th>Effect</th></tr>
+    <tr><td>Enter berms high, smoothly cut down to bottom</td><td>Converts berm into downward slope for speed</td></tr>
+    <tr><td>Crouching (RS down) while riding through berms?</td><td>Might help maintain speed slightly—needs testing</td></tr>
+    </table>
+    </div>
+    <div class="section controls">
+    <h2>VARIOUS KEYBINDS</h2>
+    <table>
+    <tr><th>Action</th><th>PlayStation</th><th>Xbox</th></tr>
+    <tr><td>Set waypoint</td><td>Hold ▼ (DPAD down)</td><td>Hold ▼ (DPAD down)</td></tr>
+    <tr><td>Spawn at waypoint</td><td>Tap ▼ (DPAD down)</td><td>Tap ▼ (DPAD down)</td></tr>
+    <tr><td>Toggle drone view</td><td>△ (Triangle)</td><td>Y</td></tr>
+    <tr><td>3rd person camera</td><td>□ (Square)</td><td>X</td></tr>
+    </table>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
