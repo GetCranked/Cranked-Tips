@@ -119,6 +119,26 @@ tr:hover { background: rgba(255,255,255,0.05); }
 
 .controls h2 { color: #B58A6A; } /* Warm Light Brown */
 .controls th { background: #B58A6A; color: #1a1a1a; }
+
+/* CSS for the new track link section and button */
+.track-guides .track-link-button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: rgba(181, 138, 106, 0.7); /* Warm Light Brown with transparency */
+    color: #E8E0D5; /* Mist/Bone text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.track-guides .track-link-button:hover {
+    background-color: rgba(181, 138, 106, 1); /* Solid color on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+    
 </style>
 </head>
 <body>
@@ -202,10 +222,17 @@ tr:hover { background: rgba(255,255,255,0.05); }
 </div>
 
 </div>
-<hr style="margin-top: 40px; border-color: rgba(230, 103, 65, 0.3);">
-<div style="text-align: center; margin-top: 20px;">
-    <a href="model-ships.html" class="back-button" style="font-size: 1.1em; padding: 12px 25px;">View Model Ships Track Guide &rarr;</a>
+
+<!-- Track Guides Section -->
+<div class="section track-guides" style="grid-column: 1 / -1; text-align: center;">
+    <h2 style="color: #B58A6A;">TRACK-SPECIFIC GUIDES</h2>
+    <p style="margin-bottom: 20px;">Deep dive into the specific lines and strategies for individual tracks.</p>
+    <a href="model-ships.html" class="track-link-button">Model Ships Guide &rarr;</a>
+</div>
+    
+    
 </div>
 </body>
 </html>
+
 
