@@ -1,218 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cranked: Tips & Tricks</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-<style>
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  max-width: 1284px;
-  margin: 20px auto;
-  padding: 15px;
-  color: #E8E0D5;
-  font-size: 12.8px;
-  background-color: #25201D;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(37, 32, 29, 0.45);
-  z-index: -1;
-}
-.header-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-.title-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.philosophy-section {
-  grid-column: 2 / 4;
-}
-h1 {
-  font-family: 'Montserrat', sans-serif;
-  color: #FFB347;
-  border-bottom: 2px solid #E66741;
-  padding-bottom: 5px;
-  margin-bottom: 0;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-.proviso {
-  padding: 10px;
-  margin-top: auto;
-}
-.main-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 15px;
-  align-items: stretch;
-}
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.column .section {
-  flex: 1;
-}
-.section {
-  background: rgba(51, 43, 38, 0.95);
-  padding: 10px;
-  border-radius: 8px;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255,255,255,0.05);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  position: relative;
-  cursor: pointer;
-  transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease, z-index .3s ease;
-}
-.section:not(.title-section):not(.links-bar):hover {
-  background-color: rgba(66, 56, 49, 0.98);
-  transform: scale(1.25);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-  z-index: 10;
-}
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.1em;
-  margin: 0 0 10px;
-}
-table { width: 100%; border-collapse: collapse; }
-th { padding: 8px 10px; text-align: left; color: #1a1a1a; }
-td { padding: 6px 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
-tr:hover { background: rgba(255,255,255,0.05); }
-.philosophy-section h2 { color: #FFB347; }
-.philosophy-section th { background: #FFB347; }
-.philosophy-section .category { font-weight: bold; color: #FFB347; }
-.jumping h2 { color: #E66741; }
-.jumping th { background: #E66741; }
-.landing h2 { color: #C49A6C; }
-.landing th { background: #C49A6C; color: #1a1a1a; }
-.berms h2 { color: #ff9966; }
-.berms th { background: #ff9966; }
-.tricks h2 { color: #E6C88A; }
-.tricks th { background: #E6C88A; color: #1a1a1a; }
-.controls h2 { color: #B58A6A; }
-.controls th { background: #B58A6A; color: #1a1a1a; }
-.links-bar {
-  margin-top: 15px;
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-.links-bar a {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  color: #FFB347;
-  text-decoration: none;
-  font-size: 1.1em;
-  letter-spacing: 1px;
-}
-.links-bar a:hover {
-  color: #E66741;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cranked: Tips & Tricks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            max-width: 1301.4045px;
+            margin: 20.27025px auto;
+            padding: 15.18375px;
+            color: #E8E0D5;
+            font-size: 12.97296px;
+            background-color: #25201D;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(37, 32, 29, 0.45);
+            z-index: -1;
+        }
+        .header-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15.18375px;
+            margin-bottom: 15.18375px;
+        }
+        .title-section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .philosophy-section {
+            grid-column: 2 / 4;
+        }
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: #FFB347;
+            border-bottom: 2px solid #E66741;
+            padding-bottom: 5.086125px;
+            margin-bottom: 0;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2.027025px;
+            text-shadow: 2.027025px 2.027025px 4.05405px rgba(0,0,0,0.5);
+        }
+        .proviso {
+            padding: 10.135125px;
+            margin-top: auto;
+        }
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15.18375px;
+            align-items: stretch;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15.18375px;
+        }
+        .column .section {
+            flex: 1;
+        }
+        .section {
+            background: rgba(51, 43, 38, 0.95);
+            padding: 10.135125px;
+            border-radius: 8.1081px;
+            backdrop-filter: blur(5.086125px);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 4.05405px 6.081075px rgba(0,0,0,0.3);
+            position: relative;
+            cursor: pointer;
+            transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease, z-index .3s ease;
+        }
+        .section:not(.title-section):not(.links-bar):hover {
+            background-color: rgba(66, 56, 49, 0.98);
+            transform: scale(1.266890625);
+            box-shadow: 0 8.1081px 16.2162px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1149875em;
+            margin: 0 0 10.135125px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th {
+            padding: 8.1081px 10.135125px;
+            text-align: left;
+            color: #1a1a1a;
+        }
+        td {
+            padding: 6.081075px 10.135125px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        tr:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        .philosophy-section h2 {
+            color: #FFB347;
+        }
+        .philosophy-section th {
+            background: #FFB347;
+        }
+        .philosophy-section .category {
+            font-weight: bold;
+            color: #FFB347;
+        }
+        .jumping h2 {
+            color: #E66741;
+        }
+        .jumping th {
+            background: #E66741;
+        }
+        .landing h2 {
+            color: #C49A6C;
+        }
+        .landing th {
+            background: #C49A6C;
+            color: #1a1a1a;
+        }
+        .berms h2 {
+            color: #ff9966;
+        }
+        .berms th {
+            background: #ff9966;
+        }
+        .tricks h2 {
+            color: #E6C88A;
+        }
+        .tricks th {
+            background: #E6C88A;
+            color: #1a1a1a;
+        }
+        .controls h2 {
+            color: #B58A6A;
+        }
+        .controls th {
+            background: #B58A6A;
+            color: #1a1a1a;
+        }
+        .links-bar {
+            margin-top: 15.18375px;
+            padding: 15.18375px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .links-bar a {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: #FFB347;
+            text-decoration: none;
+            font-size: 1.1149875em;
+            letter-spacing: 1.0135125px;
+        }
+        .links-bar a:hover {
+            color: #E66741;
+        }
+    </style>
 </head>
 <body>
-<div class="header-container">
-  <div class="title-section section">
-    <h1>CRANKED:<br>TIPS & TRICKS</h1>
-    <div class="proviso"><strong>Note:</strong> Not all of these are confirmed mechanics—some could be subtle or even placebo effects. Test everything yourself and adapt to what works for you. This guide incorporates community feedback; techniques may vary by player and situation.</div>
-  </div>
-  <div class="philosophy-section section">
-    <h2>CORE PHILOSOPHY</h2>
-    <table>
-      <tr><th>Principle</th><th>Why</th></tr>
-      <tr><td class="category">Fluidity</td><td>This game rewards fluidity on the trails, maintaining speed and flow is key. Avoid abrupt changes of direction, or excessive steering on straight sections of trail.</td></tr>
-      <tr><td class="category">Airtime = Momentum Conservation</td><td>Jumping off small terrain features helps you carry speed over trail bumps. Airing over a section of trail is generally faster than rolling over it.</td></tr>
-      <tr><td class="category">Flat > Float</td><td>Horizontal airtime preserves speed; too much vertical arc diminishes speed gains</td></tr>
-    </table>
-  </div>
-</div>
-<div class="main-grid">
-  <div class="column">
-    <div class="section jumping">
-      <h2>JUMPING</h2>
-      <table>
-        <tr><th>Tip</th><th>Effect</th></tr>
-        <tr><td>Timing for Distance: Hop early, before the lip</td><td>"Sucks up" the jump, creating more forward movement and distance with flatter arc</td></tr>
-        <tr><td>Timing for Airtime: Hop late, at the lip</td><td>Maximizes vertical height and hang time for trick opportunities</td></tr>
-        <tr><td>Leaning forward slightly (LS forward) while hitting jump</td><td>Helps carry speed and avoid excessive vertical airtime</td></tr>
-        <tr><td>Slightly leaning forward once you are in the air</td><td>Seems to help with speed and jump distance a bit</td></tr>
-        <tr><td>Pre-hop <em>before entering the jump</em></td><td>Squashes rollers, prevents airtime, carries speed</td></tr>
-        <tr><td>RS from neutral/center → fully up</td><td>"Half" bunnyhop (softer alternative to a full hop)</td></tr>
-        <tr><td>LS down while initially jumping</td><td>May boost jump height/distance (unconfirmed—test yourself)</td></tr>
-      </table>
+    <div class="header-container">
+        <div class="title-section section">
+            <h1>CRANKED:<br>TIPS & TRICKS</h1>
+            <div class="proviso"><strong>Note:</strong> Not all of these are confirmed mechanics—some could be subtle or even placebo effects. Test everything yourself and adapt to what works for you. This guide incorporates community feedback; techniques may vary by player and situation.</div>
+        </div>
+        <div class="philosophy-section section">
+            <h2>CORE PHILOSOPHY</h2>
+            <table>
+                <tr><th>Principle</th><th>Why</th></tr>
+                <tr><td class="category">Fluidity</td><td>This game rewards fluidity on the trails, maintaining speed and flow is key. Avoid abrupt changes of direction, or excessive steering on straight sections of trail.</td></tr>
+                <tr><td class="category">Airtime = Momentum Conservation</td><td>Jumping off small terrain features helps you carry speed over trail bumps. Airing over a section of trail is generally faster than rolling over it.</td></tr>
+                <tr><td class="category">Flat > Float</td><td>Horizontal airtime preserves speed; too much vertical arc diminishes speed gains</td></tr>
+            </table>
+        </div>
     </div>
-  </div>
-  <div class="column">
-    <div class="section tricks">
-      <h2>TRICKS</h2>
-      <table>
-        <tr><th>Input</th><th>Result</th></tr>
-        <tr><td>LS forward + hold RS down</td><td>Front flip</td></tr>
-        <tr><td>LS back + hold RS down</td><td>Backflip</td></tr>
-        <tr><td>LS left/right</td><td>Spins (360°, 540°, etc.)</td></tr>
-        <tr><td>LS + RS in air</td><td>Whips (hard to explain, just gotta practice this one)</td></tr>
-        <tr><td>Hold RS up during rotations</td><td>Keeps bike flat and enables faster spins</td></tr>
-      </table>
+    <div class="main-grid">
+        <div class="column">
+            <div class="section jumping">
+                <h2>JUMPING</h2>
+                <table>
+                    <tr><th>Tip</th><th>Effect</th></tr>
+                    <tr><td>Timing for Distance: Hop early, before the lip</td><td>"Sucks up" the jump, creating more forward movement and distance with flatter arc</td></tr>
+                    <tr><td>Timing for Airtime: Hop late, at the lip</td><td>Maximizes vertical height and hang time for trick opportunities</td></tr>
+                    <tr><td>Leaning forward slightly (LS forward) while hitting jump</td><td>Helps carry speed and avoid excessive vertical airtime</td></tr>
+                    <tr><td>Slightly leaning forward once you are in the air</td><td>Seems to help with speed and jump distance a bit</td></tr>
+                    <tr><td>Pre-hop <em>before entering the jump</em></td><td>Squashes rollers, prevents airtime, carries speed</td></tr>
+                    <tr><td>RS from neutral/center → fully up</td><td>"Half" bunnyhop (softer alternative to a full hop)</td></tr>
+                    <tr><td>LS down while initially jumping</td><td>May boost jump height/distance (unconfirmed—test yourself)</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section tricks">
+                <h2>TRICKS</h2>
+                <table>
+                    <tr><th>Input</th><th>Result</th></tr>
+                    <tr><td>LS forward + hold RS down</td><td>Front flip</td></tr>
+                    <tr><td>LS back + hold RS down</td><td>Backflip</td></tr>
+                    <tr><td>LS left/right</td><td>Spins (360°, 540°, etc.)</td></tr>
+                    <tr><td>LS + RS in air</td><td>Whips (hard to explain, just gotta practice this one)</td></tr>
+                    <tr><td>Hold RS up during rotations</td><td>Keeps bike flat and enables faster spins</td></tr>
+                </table>
+            </div>
+            <div class="section landing">
+                <h2>LANDING</h2>
+                <table>
+                    <tr><th>Tip</th><th>Effect</th></tr>
+                    <tr><td>Land with both wheels together, or front slightly sooner</td><td>Seems to help with speed a bit</td></tr>
+                    <tr><td>Crouching/pulling RS down while landing</td><td>Can cause bails, hard landings and speed penalty</td></tr>
+                </table>
+            </div>
+        </div>
+        <div class="column">
+            <div class="section berms">
+                <h2>BERMS</h2>
+                <table>
+                    <tr><th>Tip</th><th>Effect</th></tr>
+                    <tr><td>Enter berms high, smoothly cut down to bottom</td><td>Converts berm into downward slope for speed</td></tr>
+                    <tr><td>Crouching (RS down) while riding through berms?</td><td>Might help maintain speed slightly—needs testing</td></tr>
+                </table>
+            </div>
+            <div class="section controls">
+                <h2>VARIOUS KEYBINDS</h2>
+                <table>
+                    <tr><th>Action</th><th>PlayStation</th><th>Xbox</th></tr>
+                    <tr><td>Set waypoint</td><td>Hold ▼ (DPAD down)</td><td>Hold ▼ (DPAD down)</td></tr>
+                    <tr><td>Spawn at waypoint</td><td>Tap ▼ (DPAD down)</td><td>Tap ▼ (DPAD down)</td></tr>
+                    <tr><td>Toggle drone view</td><td>△ (Triangle)</td><td>Y</td></tr>
+                    <tr><td>3rd person camera</td><td>□ (Square)</td><td>X</td></tr>
+                </table>
+            </div>
+        </div>
     </div>
-    <div class="section landing">
-      <h2>LANDING</h2>
-      <table>
-        <tr><th>Tip</th><th>Effect</th></tr>
-        <tr><td>Land with both wheels together, or front slightly sooner</td><td>Seems to help with speed a bit</td></tr>
-        <tr><td>Crouching/pulling RS down while landing</td><td>Can cause bails, hard landings and speed penalty</td></tr>
-      </table>
+    <div class="section links-bar">
+        <a href="https://www.patreon.com/cw/CrankedGame" target="_blank">Cranked on Patreon</a>
+        <a href="https://store.steampowered.com/app/3989790/Cranked/" target="_blank">Wishlist Cranked on Steam</a>
     </div>
-  </div>
-  <div class="column">
-    <div class="section berms">
-      <h2>BERMS</h2>
-      <table>
-        <tr><th>Tip</th><th>Effect</th></tr>
-        <tr><td>Enter berms high, smoothly cut down to bottom</td><td>Converts berm into downward slope for speed</td></tr>
-        <tr><td>Crouching (RS down) while riding through berms?</td><td>Might help maintain speed slightly—needs testing</td></tr>
-      </table>
-    </div>
-    <div class="section controls">
-      <h2>VARIOUS KEYBINDS</h2>
-      <table>
-        <tr><th>Action</th><th>PlayStation</th><th>Xbox</th></tr>
-        <tr><td>Set waypoint</td><td>Hold ▼ (DPAD down)</td><td>Hold ▼ (DPAD down)</td></tr>
-        <tr><td>Spawn at waypoint</td><td>Tap ▼ (DPAD down)</td><td>Tap ▼ (DPAD down)</td></tr>
-        <tr><td>Toggle drone view</td><td>△ (Triangle)</td><td>Y</td></tr>
-        <tr><td>3rd person camera</td><td>□ (Square)</td><td>X</td></tr>
-      </table>
-    </div>
-  </div>
-</div>
-<div class="section links-bar">
-  <a href="https://www.patreon.com/cw/CrankedGame" target="_blank">Cranked on Patreon</a>
-  <a href="https://store.steampowered.com/app/3989790/Cranked/" target="_blank">Wishlist Cranked on Steam</a>
-</div>
-<script>
-const backgrounds=['fledging.png','siggy.png','lefty.png','modelships.png','prancer.png','paperwings.png','lakeside.png'];
-document.body.style.backgroundImage=`url('${backgrounds[Math.floor(Math.random()*backgrounds.length)]}')`;
-</script>
+    <script>
+        const backgrounds=['fledging.png','siggy.png','lefty.png','modelships.png','prancer.png','paperwings.png','lakeside.png'];
+        document.body.style.backgroundImage=`url('${backgrounds[Math.floor(Math.random()*backgrounds.length)]}')`;
+    </script>
 </body>
 </html>
