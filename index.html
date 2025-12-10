@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <style>
+        /* --- Base Styles (Desktop First) --- */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             max-width: 1301.4045px;
@@ -21,6 +22,7 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+
         body::before {
             content: "";
             position: fixed;
@@ -31,20 +33,24 @@
             background: rgba(37, 32, 29, 0.45);
             z-index: -1;
         }
+
         .header-container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 2fr; /* Adjusted ratio */
             gap: 15.18375px;
             margin-bottom: 15.18375px;
         }
+
         .title-section {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
+
         .philosophy-section {
-            grid-column: 2 / 4;
+            /* No longer needs grid-column, handled by layout */
         }
+
         h1 {
             font-family: 'Montserrat', sans-serif;
             color: #FFB347;
@@ -56,24 +62,29 @@
             letter-spacing: 2.027025px;
             text-shadow: 2.027025px 2.027025px 4.05405px rgba(0,0,0,0.5);
         }
+
         .proviso {
             padding: 10.135125px;
             margin-top: auto;
         }
+
         .main-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
             gap: 15.18375px;
             align-items: stretch;
         }
+
         .column {
             display: flex;
             flex-direction: column;
             gap: 15.18375px;
         }
+
         .column .section {
             flex: 1;
         }
+
         .section {
             background: rgba(51, 43, 38, 0.95);
             padding: 10.135125px;
@@ -85,82 +96,71 @@
             cursor: pointer;
             transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease, z-index .3s ease;
         }
+
         .section:not(.title-section):not(.links-bar):hover {
             background-color: rgba(66, 56, 49, 0.98);
-            transform: scale(1.266890625);
+            transform: scale(1.02); /* Reduced scale for less jarring effect */
             box-shadow: 0 8.1081px 16.2162px rgba(0,0,0,0.5);
             z-index: 10;
         }
+
         h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1149875em;
             margin: 0 0 10.135125px;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
         }
-        th {
+
+        th, td {
             padding: 8.1081px 10.135125px;
             text-align: left;
+        }
+
+        th {
             color: #1a1a1a;
         }
+
         td {
-            padding: 6.081075px 10.135125px;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
+        
         tr:hover {
             background: rgba(255,255,255,0.05);
         }
-        .philosophy-section h2 {
-            color: #FFB347;
-        }
-        .philosophy-section th {
-            background: #FFB347;
-        }
-        .philosophy-section .category {
-            font-weight: bold;
-            color: #FFB347;
-        }
-        .jumping h2 {
-            color: #E66741;
-        }
-        .jumping th {
-            background: #E66741;
-        }
-        .landing h2 {
-            color: #C49A6C;
-        }
-        .landing th {
-            background: #C49A6C;
-            color: #1a1a1a;
-        }
-        .berms h2 {
-            color: #ff9966;
-        }
-        .berms th {
-            background: #ff9966;
-        }
-        .tricks h2 {
-            color: #E6C88A;
-        }
-        .tricks th {
-            background: #E6C88A;
-            color: #1a1a1a;
-        }
-        .controls h2 {
-            color: #B58A6A;
-        }
-        .controls th {
-            background: #B58A6A;
-            color: #1a1a1a;
-        }
+
+        /* --- Section-Specific Colors --- */
+        .philosophy-section h2 { color: #FFB347; }
+        .philosophy-section th { background: #FFB347; }
+        .philosophy-section .category { font-weight: bold; color: #FFB347; }
+
+        .jumping h2 { color: #E66741; }
+        .jumping th { background: #E66741; }
+
+        .landing h2 { color: #C49A6C; }
+        .landing th { background: #C49A6C; color: #1a1a1a; }
+
+        .berms h2 { color: #ff9966; }
+        .berms th { background: #ff9966; }
+
+        .tricks h2 { color: #E6C88A; }
+        .tricks th { background: #E6C88A; color: #1a1a1a; }
+
+        .controls h2 { color: #B58A6A; }
+        .controls th { background: #B58A6A; color: #1a1a1a; }
+
         .links-bar {
             margin-top: 15.18375px;
             padding: 15.18375px;
             display: flex;
             justify-content: space-between;
+            flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+            gap: 10px; /* Add gap between wrapped links */
         }
+
         .links-bar a {
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
@@ -169,8 +169,66 @@
             font-size: 1.1149875em;
             letter-spacing: 1.0135125px;
         }
+
         .links-bar a:hover {
             color: #E66741;
+        }
+
+        /* --- Responsive Design for Tablets and Smaller --- */
+        @media (max-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr 1fr; /* Two columns */
+            }
+            .header-container {
+                grid-template-columns: 1fr; /* Stack header */
+            }
+            .philosophy-section {
+                margin-top: 15.18375px;
+            }
+        }
+
+        /* --- Responsive Design for Mobile Phones --- */
+        @media (max-width: 600px) {
+            body {
+                margin: 10px;
+                padding: 10px;
+                font-size: 14px; /* Slightly larger base font for readability */
+            }
+            
+            h1 {
+                font-size: 1.5em;
+                letter-spacing: 1px;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr; /* Single column layout */
+            }
+            
+            .header-container {
+                grid-template-columns: 1fr; /* Ensure single column */
+            }
+
+            .section:not(.title-section):not(.links-bar):hover {
+                transform: none; /* Disable scale on mobile for better UX */
+            }
+
+            .links-bar {
+                justify-content: center;
+                text-align: center;
+            }
+            .links-bar a {
+                font-size: 1em;
+            }
+            
+            /* Make tables more readable on small screens */
+            th, td {
+                padding: 5px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
