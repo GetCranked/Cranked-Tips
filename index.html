@@ -20,8 +20,7 @@ body {
     
     /* BACKGROUND SETUP */
     background-color: #25201D; /* Deep Loam Fallback */
-    /* CORRECTED: Ensures the exact filename is used */
-    background-image: url('CrankedtipsBG.png');
+    /* REMOVED: The static background-image line is now handled by JavaScript */
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -206,6 +205,24 @@ tr:hover { background: rgba(255,255,255,0.05); }
 </div>
 
 </div>
+
+<!-- ADDED: JavaScript to rotate background images -->
+<script>
+// Array of your 5 background images, using their exact filenames
+const backgrounds = [
+    'fledging.png',
+    'siggy.png',
+    'lefty.png',
+    'modelships.png',
+    'prancer.png'
+];
+
+// Select a random image from the array
+const randomBg = backgrounds[Math.floor(Math.random() * backgrounds.length)];
+
+// Set the background image of the page
+document.body.style.backgroundImage = `url('${randomBg}')`;
+</script>
 
 </body>
 </html>
