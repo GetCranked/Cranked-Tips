@@ -83,11 +83,6 @@ h1 {
     margin-bottom: 15px; /* REDUCED from 25px */
 }
 
-/* ADDED: Specific margin for the track guides section to create space */
-.track-guides {
-    margin-top: 25px !important;
-}
-
 /* Remove bottom margin from the last section in a column */
 .column > .section:last-child {
     margin-bottom: 0;
@@ -126,28 +121,7 @@ tr:hover { background: rgba(255,255,255,0.05); }
 .controls h2 { color: #B58A6A; } /* Warm Light Brown */
 .controls th { background: #B58A6A; color: #1a1a1a; }
 
-/* ADDED: CSS for the new track link section and button */
-.track-guides {
-    text-align: center;
-}
-
-.track-guides .track-link-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: rgba(181, 138, 106, 0.7); /* Warm Light Brown with transparency */
-    color: #E8E0D5; /* Mist/Bone text color */
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.track-guides .track-link-button:hover {
-    background-color: rgba(181, 138, 106, 1); /* Solid color on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-}
+/* REMOVED: CSS for the track link section and button as it's no longer on the page */
 
 </style>
 </head>
@@ -229,12 +203,6 @@ tr:hover { background: rgba(255,255,255,0.05); }
     <tr><td>3rd person camera</td><td>□ (Square)</td><td>X</td></tr>
     </table>
     </div>
-</div>
-
-<!-- Track Guides Section -->
-<div class="section track-guides" style="grid-column: 1 / -1;">
-    <h2 style="color: #B58A6A;">TRACK-SPECIFIC GUIDES</h2>
-    <a href="model-ships.html" class="track-link-button">Model Ships Guide &rarr;</a>
 </div>
 
 </div>
