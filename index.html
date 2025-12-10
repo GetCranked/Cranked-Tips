@@ -85,7 +85,7 @@ h1 {
   cursor: pointer;
   transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease, z-index .3s ease;
 }
-.section:not(.title-section):hover {
+.section:not(.title-section):not(.links-bar):hover {
   background-color: rgba(66, 56, 49, 0.98);
   transform: scale(1.25);
   box-shadow: 0 8px 16px rgba(0,0,0,0.5);
@@ -113,6 +113,23 @@ tr:hover { background: rgba(255,255,255,0.05); }
 .tricks th { background: #E6C88A; color: #1a1a1a; }
 .controls h2 { color: #B58A6A; }
 .controls th { background: #B58A6A; color: #1a1a1a; }
+.links-bar {
+  margin-top: 15px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.links-bar a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #FFB347;
+  text-decoration: none;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+}
+.links-bar a:hover {
+  color: #E66741;
+}
 </style>
 </head>
 <body>
@@ -188,6 +205,10 @@ tr:hover { background: rgba(255,255,255,0.05); }
       </table>
     </div>
   </div>
+</div>
+<div class="section links-bar">
+  <a href="https://www.patreon.com/cw/CrankedGame" target="_blank">Cranked on Patreon</a>
+  <a href="https://store.steampowered.com/app/3989790/Cranked/" target="_blank">Wishlist Cranked on Steam</a>
 </div>
 <script>
 const backgrounds=['fledging.png','siggy.png','lefty.png','modelships.png','prancer.png','paperwings.png','lakeside.png'];
